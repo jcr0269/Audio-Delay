@@ -1,0 +1,34 @@
+Create Python environment
+    1) Goto search bar and type command prompt
+    2) Open command prompt and check if python is installed using python --version, if python not installed
+    go here https://www.python.org/downloads/windows/ and click latest Python 3 Release and make sure to check add to PATH
+    3) With Python installed and in command prompt type cd desktop to move to your desktop
+    4) Next type py -m venv "name of environment" ex: py -m venv DSPHW1
+        -The name is what ever you want it to be.
+    5) Next enter the env folder using cd "name of environment"
+        -This is the envirement that you just created
+        -Ex: cd Desktop/"name of environment"
+    6) Activate the environment by typing Scripts\activate
+    7) When done with running python files, type deactivate and close command prompt
+
+
+Run Files
+    1) Open your file browser
+    2) Find compressed file and extract
+        -the extracted file must be in the same location as the envirement you created above.
+    3) Move extracted files into the created Python environment folder
+    4) Go back to command prompt and ensure you are inside the environment and it is active.
+        a) If env is not active please go into the environment using cd desktop\"name of environment" and then follow step 6
+    5) In command prompt type pip install -r requirements.txt to install all requirements
+    5) In command prompt type python main.py follwed by passable arguements if you wish to make your own audio recording,
+    change the delay rate, change the delay coeffs or increase the number of echoes generated
+
+
+Passable Arguements
+--recording : Bool statement. Default to False. If True you will need to have a microphone plugged in to record your own audio
+--file : .wav file. Default is premade 20second recording. Filetype must be .wav and 1 channel
+Next three passable arguements must be the same size ex echoes =3 the delay rate length and coeffs length must be 3
+--echoes : number of echoes to generate
+--delay_rate : a list of different delay rates to apply
+--coeffs : a list of different amplitude coeffs to apply to the delay signals
+--outfile : .wav file generated at the end.
